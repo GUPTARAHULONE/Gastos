@@ -56,19 +56,118 @@
         app:layout_constraintTop_toBottomOf="@+id/t1" />
 
     <EditText
-        android:id="@+id/otp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
-        android:layout_marginLeft="99dp"
-        android:layout_marginTop="33dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/t2" />
+        android:id="@+id/inputcode1"
+        android:layout_width="27dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_blue"
+
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/t2"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="Labelfor"/>
+
+    <EditText
+        android:id="@+id/inputcode2"
+        android:layout_width="27dp"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_blue"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/inputcode1"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="Labelfor"/>
+
+    <EditText
+        android:id="@+id/inputcode3"
+        android:layout_width="27dp"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_blue"
+
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/inputcode2"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="Labelfor"/>
+
+    <EditText
+        android:id="@+id/inputcode4"
+        android:layout_width="27dp"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_blue"
+
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/inputcode3"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="Labelfor"/>
+
+    <EditText
+        android:id="@+id/inputcode5"
+        android:layout_width="27dp"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_blue"
+
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/inputcode4"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="Labelfor"/>
+
+    <EditText
+        android:id="@+id/inputcode6"
+        android:layout_width="27dp"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="40dp"
+        android:background="@color/dark_blue"
+
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/inputcode5"
+        app:layout_constraintTop_toBottomOf="@+id/t2"
+        tools:ignore="Labelfor"/>
 
     <TextView
-        android:id="@+id/Resend"
+        android:id="@+id/resend_otp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="256dp"
@@ -78,7 +177,7 @@
         android:textColor="@color/dark_blue"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp" />
+        app:layout_constraintTop_toBottomOf="@+id/inputcode1" />
 
     <Button
         android:id="@+id/button"
@@ -87,8 +186,10 @@
         android:layout_marginStart="163dp"
         android:layout_marginLeft="163dp"
         android:layout_marginTop="48dp"
+        android:textColor="@color/dark_blue"
+        app:backgroundTint="#03A9F4"
         android:text="Verify"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp" />
+        app:layout_constraintTop_toBottomOf="@+id/inputcode1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
