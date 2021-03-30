@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/registratio"
         android:layout_width="176dp"
-        android:layout_height="31dp"
+        android:layout_height="33dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="37dp"
@@ -44,11 +44,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="phone"
+        android:background="@null"
+        android:imeOptions="actionDone"
 
+        android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="@+id/enter_mobil"
         app:layout_constraintStart_toStartOf="@+id/enter_mobil"
         app:layout_constraintTop_toBottomOf="@+id/enter_mobil" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="238dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="46dp"
+        android:background="@drawable/ic_line_21"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
 
     <Button
         android:id="@+id/otp_btn"

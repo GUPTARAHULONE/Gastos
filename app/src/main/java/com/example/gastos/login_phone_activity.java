@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.TaskExecutors;
+import com.google.firebase.FirebaseException;
+
+import java.util.concurrent.TimeUnit;
+
 public class login_phone_activity extends AppCompatActivity {
 
     private Button otp_button;
@@ -29,6 +34,8 @@ public class login_phone_activity extends AppCompatActivity {
                         Intent intent = new Intent(login_phone_activity.this, getotp_activity.class);
                         intent.putExtra("phone_number", num);
                         startActivity(intent);
+
+
                     } else {
                         Toast.makeText(login_phone_activity.this, "Please enter correct phone number", Toast.LENGTH_SHORT).show();
                     }
