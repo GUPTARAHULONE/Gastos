@@ -54,14 +54,14 @@ public class getotp_activity extends AppCompatActivity {
         inputcode6=findViewById(R.id.inputcode6);
         // setupOTPINPUTS();
 
-       /* PhoneAuthOptions options =
+   /* PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber(phonenumber_value) // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
                         .build();
-        PhoneAuthProvider.verifyPhoneNumber(options);   */
+        PhoneAuthPro    vider.verifyPhoneNumber(options);   */
 
 
        /* mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
