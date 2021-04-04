@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".step_pin_activity">
+    tools:context=".EnterPinActivity">
 
     <TextView
-        android:id="@+id/s1"
+        android:id="@+id/txt1"
         android:layout_width="176dp"
         android:layout_height="31dp"
         android:layout_alignParentLeft="true"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/s2"
+        android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="57dp"
@@ -32,10 +32,10 @@
         android:textColor="@color/dark_blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/s1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
 
     <EditText
-        android:id="@+id/inputpin1"
+        android:id="@+id/digit1"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -46,34 +46,16 @@
         android:maxLength="1"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/s2"
-        app:layout_constraintTop_toBottomOf="@+id/s2"
+        app:layout_constraintStart_toStartOf="@+id/txt2"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
         tools:ignore="Labelfor" />
 
     <EditText
-        android:id="@+id/inputpin2"
-        android:layout_width="27dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        android:imeOptions="actionNext"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/inputpin1"
-        app:layout_constraintTop_toBottomOf="@+id/s2"
-        tools:ignore="Labelfor" />
-
-    <EditText
-        android:id="@+id/inputpin3"
+        android:id="@+id/digit2"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
 
         android:layout_marginLeft="40dp"
-
         android:layout_marginTop="40dp"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
@@ -81,12 +63,12 @@
         android:maxLength="1"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/inputpin2"
-        app:layout_constraintTop_toBottomOf="@+id/s2"
+        app:layout_constraintLeft_toLeftOf="@id/digit1"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
         tools:ignore="Labelfor" />
 
     <EditText
-        android:id="@+id/inputpin4"
+        android:id="@+id/digit3"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
 
@@ -99,12 +81,12 @@
         android:maxLength="1"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/inputpin3"
-        app:layout_constraintTop_toBottomOf="@+id/s2"
+        app:layout_constraintLeft_toLeftOf="@id/digit2"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
         tools:ignore="Labelfor" />
 
     <EditText
-        android:id="@+id/inputcode5"
+        android:id="@+id/digit4"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
 
@@ -117,12 +99,29 @@
         android:maxLength="1"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/inputpin4"
-        app:layout_constraintTop_toBottomOf="@+id/s2"
+        app:layout_constraintLeft_toLeftOf="@id/digit3"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
         tools:ignore="Labelfor" />
 
+    <EditText
+        android:id="@+id/digit5"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="40dp"
+
+        android:layout_marginTop="40dp"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/digit4"
+        app:layout_constraintTop_toBottomOf="@+id/txt2"
+        tools:ignore="Labelfor" />
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
@@ -130,7 +129,5 @@
         android:layout_marginTop="34dp"
         android:text="OK"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputpin1" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/digit1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
