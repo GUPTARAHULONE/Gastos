@@ -208,8 +208,9 @@ public class getotp_activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(getotp_activity.this, Account_verified_activity.class);
+                            Intent i = new Intent(getotp_activity.this, step_pin_activity.class);
                             startActivity(i);
+
                             //Toast.makeText(VerifyOTPActivity.this, "User verified..", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getotp_activity.this, "Fail to verify the user..", Toast.LENGTH_SHORT).show();

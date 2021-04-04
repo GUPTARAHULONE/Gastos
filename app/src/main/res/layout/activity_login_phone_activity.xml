@@ -46,7 +46,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="phone"
-
+        android:backgroundTint="@color/dark_blue"
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="@+id/enter_mobil"

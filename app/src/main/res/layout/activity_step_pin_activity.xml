@@ -39,7 +39,7 @@
         android:layout_width="27dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-
+        android:backgroundTint="@color/dark_blue"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
@@ -54,7 +54,7 @@
         android:id="@+id/inputpin2"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:imeOptions="actionNext"
@@ -71,7 +71,7 @@
         android:id="@+id/inputpin3"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginLeft="40dp"
 
         android:layout_marginTop="40dp"
@@ -89,7 +89,7 @@
         android:id="@+id/inputpin4"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginLeft="40dp"
 
         android:layout_marginTop="40dp"
@@ -104,10 +104,10 @@
         tools:ignore="Labelfor" />
 
     <EditText
-        android:id="@+id/inputcode5"
+        android:id="@+id/inputpin5"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginLeft="40dp"
 
         android:layout_marginTop="40dp"

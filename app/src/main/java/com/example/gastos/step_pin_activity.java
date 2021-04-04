@@ -3,42 +3,157 @@ package com.example.gastos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+
+
 
 public class step_pin_activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private String email,pin;
+   // StorageReference storageReference;
+    FirebaseFirestore db;
+    EditText input1, input2, input3, input4,input5;
+    String pin;
+    Button pinbtn;
+    //private String email,pin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_pin_activity);
 
+        input1=findViewById(R.id.inputpin1);
+        input2=findViewById(R.id.inputpin2);
+        input3=findViewById(R.id.inputpin3);
+        input4=findViewById(R.id.inputpin4);
+        input5=findViewById(R.id.inputpin5);
+        pinbtn=findViewById(R.id.button2);
         mAuth = FirebaseAuth.getInstance();
+          db= FirebaseFirestore.getInstance();
+             setpin();
+           pin=input1.getText().toString()+input2.getText().toString()+input3.getText().toString()+input4.getText().toString()+input5.getText().toString();
 
+        db.collection("pin_users")
+                .add(pin)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d("TAG", "DocumentSnapshot added with ID: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("TAG", "Error adding document", e);
+                    }
+                });
+
+        pinbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(step_pin_activity.this, Account_verified_activity.class);
+                startActivity(i);
+            }
+        });
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
+   private void setpin()
+   {
+       input1.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+           }
 
-        }
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-    }
+               if (!s.toString().trim().isEmpty())
+               {
+                   input2.requestFocus();
+               }
+           }
 
-    private void createAccount(String email, String password) {
+           @Override
+           public void afterTextChanged(Editable s) {
+
+           }
+       });
+       input2.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+               if (!s.toString().trim().isEmpty())
+               {
+                   input3.requestFocus();
+               }
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {
+
+           }
+       });
+       input3.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+               if (!s.toString().trim().isEmpty())
+               {
+                   input4.requestFocus();
+               }
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {
+
+           }
+       });
+       input4.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+               if (!s.toString().trim().isEmpty())
+               {
+                   input5.requestFocus();
+               }
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {
+
+           }
+       });
+   }
+    /*private void createAccount(String email, String password) {
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -60,8 +175,8 @@ public class step_pin_activity extends AppCompatActivity {
                 });
         // [END create_user_with_email]
     }
-
-    private void signIn(String email, String password) {
+*/
+   /* private void signIn(String email, String password) {
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -83,4 +198,6 @@ public class step_pin_activity extends AppCompatActivity {
                 });
         // [END sign_in_with_email]
     }
+
+    */
 }
