@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".login_phone_activity">
 
 
@@ -45,13 +46,13 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="phone"
-        android:background="@null"
-        android:imeOptions="actionDone"
 
+        android:imeOptions="actionDone"
         android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="@+id/enter_mobil"
         app:layout_constraintStart_toStartOf="@+id/enter_mobil"
         app:layout_constraintTop_toBottomOf="@+id/enter_mobil" />
+
 
     <Button
         android:id="@+id/otp_btn"

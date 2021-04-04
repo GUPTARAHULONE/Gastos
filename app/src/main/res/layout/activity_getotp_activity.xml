@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".getotp_activity">
 
     <TextView
         android:id="@+id/verify"
         android:layout_width="176dp"
-        android:layout_height="31dp"
+        android:layout_height="35dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="37dp"
@@ -66,105 +67,91 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="12sp"
+
         app:layout_constraintStart_toStartOf="@+id/t2"
         app:layout_constraintTop_toBottomOf="@+id/t2"
-        tools:ignore="Labelfor"/>
+        />
 
     <EditText
         android:id="@+id/inputcode2"
         android:layout_width="27dp"
         android:layout_height="2dp"
 
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/dark_blue"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="40dp"
+        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="@id/inputcode1"
         app:layout_constraintTop_toBottomOf="@+id/t2"
-        tools:ignore="Labelfor"/>
+        />
 
     <EditText
         android:id="@+id/inputcode3"
         android:layout_width="27dp"
         android:layout_height="2dp"
-
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/dark_blue"
-
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="40dp"
+        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="@id/inputcode2"
         app:layout_constraintTop_toBottomOf="@+id/t2"
-        tools:ignore="Labelfor"/>
+        />
 
     <EditText
         android:id="@+id/inputcode4"
         android:layout_width="27dp"
         android:layout_height="2dp"
-
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/dark_blue"
-
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="40dp"
+        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="@id/inputcode3"
         app:layout_constraintTop_toBottomOf="@+id/t2"
-        tools:ignore="Labelfor"/>
+         />
 
     <EditText
         android:id="@+id/inputcode5"
         android:layout_width="27dp"
         android:layout_height="2dp"
-
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/dark_blue"
-
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="40dp"
+        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="@id/inputcode4"
-        app:layout_constraintTop_toBottomOf="@+id/t2"
-        tools:ignore="Labelfor"/>
+        app:layout_constraintTop_toBottomOf="@+id/t2"/>
 
     <EditText
         android:id="@+id/inputcode6"
         android:layout_width="27dp"
         android:layout_height="2dp"
-
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:background="@color/dark_blue"
-
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="1"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="40dp"
+        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="@id/inputcode5"
         app:layout_constraintTop_toBottomOf="@+id/t2"
-        tools:ignore="Labelfor"/>
+        />
 
     <TextView
         android:id="@+id/resend_otp"

@@ -98,6 +98,7 @@
         app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
         app:layout_constraintStart_toStartOf="@+id/rectangle_2"
         app:layout_constraintTop_toTopOf="@+id/rectangle_2"
+        android:background="@null"
         app:srcCompat="@drawable/logo1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
