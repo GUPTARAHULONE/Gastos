@@ -15,7 +15,7 @@
         android:layout_marginLeft="37dp"
         android:layout_marginTop="10dp"
         android:gravity="top"
-        android:text="Set Pin"
+        android:text="Enter Pin"
         android:textColor="@color/dark_blue"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
         android:layout_marginTop="197dp"
-        android:text="Set Your Pin"
+        android:text="Enter Your Pin"
         android:textColor="@color/dark_blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         android:layout_width="27dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-
+        android:backgroundTint="@color/dark_blue"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
         android:inputType="number"
@@ -54,7 +54,7 @@
         android:id="@+id/digit2"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
         android:imeOptions="actionNext"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
 
         android:layout_marginLeft="40dp"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginTop="40dp"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
 
         android:layout_marginLeft="40dp"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginTop="40dp"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
@@ -107,7 +107,7 @@
         android:id="@+id/digit5"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
-
+        android:backgroundTint="@color/dark_blue"
         android:layout_marginLeft="40dp"
 
         android:layout_marginTop="40dp"

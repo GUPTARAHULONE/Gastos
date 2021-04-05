@@ -11,20 +11,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class step_pin_activity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
    // StorageReference storageReference;
+   private String user_id;
     FirebaseFirestore db;
     EditText input1, input2, input3, input4,input5;
     String pin;
@@ -42,16 +47,22 @@ public class step_pin_activity extends AppCompatActivity {
         input5=findViewById(R.id.inputpin5);
         pinbtn=findViewById(R.id.button2);
         mAuth = FirebaseAuth.getInstance();
+        user_id = mAuth.getCurrentUser().getUid();
           db= FirebaseFirestore.getInstance();
              setpin();
            pin=input1.getText().toString()+input2.getText().toString()+input3.getText().toString()+input4.getText().toString()+input5.getText().toString();
 
-        db.collection("pin_users")
-                .add(pin)
+
+        Map<String, Object> usermap = new HashMap<>();
+        usermap.put("setpin=", pin);
+
+        db.collection("users_pin")
+                .add(usermap)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d("TAG", "DocumentSnapshot added with ID: " + documentReference.getId());
+                        //Log.d("TAG", "DocumentSnapshot added with ID: " + documentReference.getId());
+                        Toast.makeText(step_pin_activity.this, "set pin done="+pin, Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -60,6 +71,7 @@ public class step_pin_activity extends AppCompatActivity {
                         Log.w("TAG", "Error adding document", e);
                     }
                 });
+
 
         pinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
