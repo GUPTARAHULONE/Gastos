@@ -16,15 +16,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.gms.tasks.TaskExecutors;
-import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.FirebaseException;
-import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
-import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
@@ -33,7 +28,7 @@ public class getotp_activity extends AppCompatActivity {
 
    TextView phone_num;
    EditText inputotp1, inputotp2, inputotp3, inputotp4, inputotp5,inputotp6;
-   String phonenumber_value;
+   public String phonenumber_value;
    private FirebaseAuth mAuth;
    Button btnVerify;
     private TextView resendOTPTV;
@@ -58,7 +53,7 @@ public class getotp_activity extends AppCompatActivity {
         inputotp2=findViewById(R.id.inputcode2);
         inputotp3=findViewById(R.id.inputcode3);
         inputotp4=findViewById(R.id.inputcode4);
-        inputotp5=findViewById(R.id.inputcode5);
+        inputotp5=findViewById(R.id.inputpin5);
         inputotp6=findViewById(R.id.inputcode6);
         resendOTPTV=findViewById(R.id.resend_otp);
 
@@ -70,7 +65,10 @@ public class getotp_activity extends AppCompatActivity {
             public void onClick(View v) {
                 String otp = inputotp1.getText().toString() + inputotp2.getText().toString() + inputotp3.getText().toString() + inputotp4.getText().toString() + inputotp5.getText().toString() + inputotp6.getText().toString();
 
+                if(otp .length() == 6)
                 verifyCode(otp);
+                else
+                    Toast.makeText(getotp_activity.this, "Enter Correct OTP", Toast.LENGTH_SHORT).show();
             }
         });
         resendOTPTV.setOnClickListener(new View.OnClickListener() {
@@ -208,7 +206,7 @@ public class getotp_activity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent i = new Intent(getotp_activity.this, Account_verified_activity.class);
+                            Intent i = new Intent(getotp_activity.this, step_pin_activity.class);
                             startActivity(i);
                             //Toast.makeText(VerifyOTPActivity.this, "User verified..", Toast.LENGTH_SHORT).show();
                         } else {

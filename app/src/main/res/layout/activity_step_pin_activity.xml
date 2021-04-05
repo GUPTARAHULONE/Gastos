@@ -104,7 +104,7 @@
         tools:ignore="Labelfor" />
 
     <EditText
-        android:id="@+id/inputcode5"
+        android:id="@+id/inputpin5"
         android:layout_width="27dp"
         android:layout_height="wrap_content"
 
@@ -122,7 +122,7 @@
         tools:ignore="Labelfor" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnOk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="91dp"
