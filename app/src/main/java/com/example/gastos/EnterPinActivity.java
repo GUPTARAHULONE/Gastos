@@ -3,8 +3,13 @@ package com.example.gastos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +45,7 @@ public class EnterPinActivity extends AppCompatActivity {
         user_id = mAuth.getCurrentUser().getUid();
         db= FirebaseFirestore.getInstance();
 
+
         dig1 = findViewById(R.id.digit1);
         dig2 = findViewById(R.id.digit2);
         dig3 = findViewById(R.id.digit3);
@@ -48,6 +54,7 @@ public class EnterPinActivity extends AppCompatActivity {
 
         btnOk = findViewById(R.id.btnOK);
 
+        setpinEditText();
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,7 +62,7 @@ public class EnterPinActivity extends AppCompatActivity {
                         dig4.getText().toString() + dig5.getText().toString();
                 if(enteredPin.length() == 5)
                 {
-                    if(enteredPin == getOriginalPin())
+                    if(enteredPin.equals(getOriginalPin()) )
                     {
                         //Intent
                         Intent intent = new Intent(EnterPinActivity.this,Account_verified_activity.class);
@@ -63,7 +70,7 @@ public class EnterPinActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(EnterPinActivity.this, "Entered Pin is Incorrect", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EnterPinActivity.this, "Entered Pin is Incorrect " , Toast.LENGTH_SHORT).show();
                     }
                 }
                 else
@@ -78,26 +85,93 @@ public class EnterPinActivity extends AppCompatActivity {
     }
     private String getOriginalPin()
     {
-        DocumentReference docRef = db.collection("users_pin").document(user_id);
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-//                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        map = document.getData();
-                        originalPin = map.get("setpin=").toString();
-
-
-                    } else {
-//                        Log.d(TAG, "No such document");
-                    }
-                } else {
-//                    Log.d(TAG, "get failed with ", task.getException());
-                }
-            }
-        });
+        SharedPreferences sharedPref =  getSharedPreferences("preference", Context.MODE_PRIVATE);
+        originalPin = sharedPref.getString("myPin","");
         return originalPin;
     }
+
+    private void setpinEditText()
+    {
+        dig1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (!s.toString().trim().isEmpty())
+                {
+                    dig2.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        dig2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (!s.toString().trim().isEmpty())
+                {
+                    dig3.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        dig3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (!s.toString().trim().isEmpty())
+                {
+                   dig4.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        dig4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (!s.toString().trim().isEmpty())
+                {
+                    dig5.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
+
 }

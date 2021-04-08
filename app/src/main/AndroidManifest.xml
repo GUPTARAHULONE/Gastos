@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Gastos">
         <activity android:name=".EnterPinActivity"></activity>
         <activity android:name=".Account_verified_activity" />
-        <activity android:name=".step_pin_activity" />
+        <activity android:name=".step_pin_activity" >
+        </activity>
         <activity android:name=".getotp_activity" />
         <activity android:name=".login_phone_activity" />
         <activity android:name=".MainActivity">

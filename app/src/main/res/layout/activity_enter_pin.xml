@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnterPinActivity">
+    tools:context=".EnterPinActivity"
+    android:background="@color/background">
 
     <TextView
         android:id="@+id/txt1"
@@ -15,7 +16,7 @@
         android:layout_marginLeft="37dp"
         android:layout_marginTop="10dp"
         android:gravity="top"
-        android:text="Set Pin"
+        android:text="ENTER PIN"
         android:textColor="@color/dark_blue"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +29,7 @@
         android:layout_marginStart="57dp"
         android:layout_marginLeft="57dp"
         android:layout_marginTop="197dp"
-        android:text="Set Your Pin"
+        android:text="@string/EnterPin"
         android:textColor="@color/dark_blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +121,7 @@
         app:layout_constraintLeft_toLeftOf="@id/digit4"
         app:layout_constraintTop_toBottomOf="@+id/txt2"
         tools:ignore="Labelfor" />
+
     <Button
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
@@ -127,7 +129,7 @@
         android:layout_marginStart="91dp"
         android:layout_marginLeft="91dp"
         android:layout_marginTop="34dp"
-        android:text="OK"
+        android:text="Verify"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/digit1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

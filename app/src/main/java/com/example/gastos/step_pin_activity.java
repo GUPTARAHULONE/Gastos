@@ -3,8 +3,11 @@ package com.example.gastos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -28,12 +31,11 @@ import java.util.Map;
 
 public class step_pin_activity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
-    private String user_id;
-    FirebaseFirestore db;
-    private String email,pin;
+
+    private String pin;
     private EditText edt1,edt2,edt3,edt4,edt5;
     private Button btnDone;
+    private SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,31 +49,7 @@ public class step_pin_activity extends AppCompatActivity {
 
         btnDone = findViewById(R.id.btnOk);
 
-        mAuth = FirebaseAuth.getInstance();
-        user_id = mAuth.getCurrentUser().getUid();
-        db= FirebaseFirestore.getInstance();
-        setpin();
-        email = new getotp_activity().phonenumber_value + "@example.com";
-
-
-//        btnDone.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                if(email != null && pin != null)
-//                {
-//                    createAccount(email,pin);
-//                }
-//
-//
-//            }
-//        });
-
-
-
-
-
-
+        setpinEditText();
 
         btnDone.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -79,26 +57,10 @@ public class step_pin_activity extends AppCompatActivity {
             pin = edt1.getText().toString() + edt2.getText().toString() + edt3.getText().toString() +
                     edt4.getText().toString() + edt5.getText().toString();
             if(pin.length() == 5 ) {
-                Map<String, Object> usermap = new HashMap<>();
 
-                usermap.put("setpin=", pin);
-
-                db.collection("users_pin")
-                        .add(usermap)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                //Log.d("TAG", "DocumentSnapshot added with ID: " + documentReference.getId());
-                                Toast.makeText(step_pin_activity.this, "set pin done=" + pin, Toast.LENGTH_SHORT).show();
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w("TAG", "Error adding document", e);
-                            }
-                        });
-                Intent i = new Intent(step_pin_activity.this, Account_verified_activity.class);
+                setPin(pin);
+                Toast.makeText(step_pin_activity.this, "set pin done=" + pin, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(step_pin_activity.this, EnterPinActivity.class);
                 startActivity(i);
             }
             else
@@ -108,8 +70,15 @@ public class step_pin_activity extends AppCompatActivity {
         }
     });
 }
+    private void setPin(String pin)
+    {
+        sharedPreferences =  getSharedPreferences("preference", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("myPin", pin);
+        editor.apply();
+    }
 
-    private void setpin()
+    private void setpinEditText()
     {
         edt1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -192,68 +161,5 @@ public class step_pin_activity extends AppCompatActivity {
             }
         });
     }
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//
-//        }
-//        else
-//        {
-////            signIn(email , pin);
-//        }
-//
-//    }
-//
-//    private void createAccount(String email, String password) {
-//        // [START create_user_with_email]
-//        mAuth.createUserWithEmailAndPassword(email, password)
-//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if (task.isSuccessful()) {
-//                            // Sign in success, update UI with the signed-in user's information
-////                            Log.d(TAG, "createUserWithEmail:success");
-//                            FirebaseUser user = mAuth.getCurrentUser();
-//                            Toast.makeText(step_pin_activity.this, "Authentication Success.",
-//                                    Toast.LENGTH_SHORT).show();
-////                            updateUI(user);
-//                        } else {
-//                            // If sign in fails, display a message to the user.
-////                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-//                            Toast.makeText(step_pin_activity.this, "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
-////                            updateUI(null);
-//                        }
-//                    }
-//                });
-//        // [END create_user_with_email]
-//    }
-//
-//    private void signIn(String email, String password) {
-//        // [START sign_in_with_email]
-//        mAuth.signInWithEmailAndPassword(email, password)
-//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if (task.isSuccessful()) {
-//                            // Sign in success, update UI with the signed-in user's information
-////                            Log.d(TAG, "signInWithEmail:success");
-//                            FirebaseUser user = mAuth.getCurrentUser();
-//                            Toast.makeText(step_pin_activity.this, "Authentication Success.",
-//                                    Toast.LENGTH_SHORT).show();
-////                            updateUI(user);
-//                        } else {
-//                            // If sign in fails, display a message to the user.
-////                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-//                            Toast.makeText(step_pin_activity.this, "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
-////                            updateUI(null);
-//                        }
-//                    }
-//                });
-//        // [END sign_in_with_email]
-//    }
+
 }
