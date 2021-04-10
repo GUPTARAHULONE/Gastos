@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
-        button_login=findViewById(R.id.btn);
+        button_login=findViewById(R.id.btnverified);
         button_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

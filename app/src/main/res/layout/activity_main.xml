@@ -44,7 +44,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/btn"
+        android:id="@+id/btnverified"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"

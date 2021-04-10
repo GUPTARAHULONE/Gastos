@@ -65,7 +65,7 @@ public class EnterPinActivity extends AppCompatActivity {
                     if(enteredPin.equals(getOriginalPin()) )
                     {
                         //Intent
-                        Intent intent = new Intent(EnterPinActivity.this,Account_verified_activity.class);
+                        Intent intent = new Intent(EnterPinActivity.this,Mainscreen.class);
                         startActivity(intent);
                     }
                     else
