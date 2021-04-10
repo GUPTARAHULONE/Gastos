@@ -60,7 +60,7 @@ public class step_pin_activity extends AppCompatActivity {
 
                 setPin(pin);
                 Toast.makeText(step_pin_activity.this, "set pin done=" + pin, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(step_pin_activity.this, EnterPinActivity.class);
+                Intent i = new Intent(step_pin_activity.this, Account_verified_activity.class);
                 startActivity(i);
             }
             else
