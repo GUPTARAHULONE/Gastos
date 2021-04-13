@@ -16,4 +16,6 @@
         <item name="tabIndicatorColor">#000000</item>
         <item name="tabIndicatorHeight">2dp</item>
     </style>
+
+
 </resources>
