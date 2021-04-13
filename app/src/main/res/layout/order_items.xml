@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    android:layout_margin="8dp"
+    app:cardElevation="0dp"
+    android:background="#3E8479"   >
+
+        <LinearLayout
+            android:id="@+id/linear_layout_offer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+                <TextView
+                    android:id="@+id/order_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:textSize="18sp"
+                    android:text="Name"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/white"/>
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
 
 
-    <TextView
-        android:id="@+id/order_items"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:text="name"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        android:layout_marginLeft="20dp"
-        />
-</LinearLayout>
+
+

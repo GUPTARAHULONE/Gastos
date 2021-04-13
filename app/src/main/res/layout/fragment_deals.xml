@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3E8479"
+    android:background="@color/dark_blue"
     tools:context=".DealsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -27,24 +27,26 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:text="Exclusive Offers" />
+<LinearLayout
+    android:id="@+id/linear_layout_offer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/t1"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/offer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/t1"
-        android:layout_marginTop="20dp"
+
 
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/offer"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        app:spanCount="2"
-        />
+</LinearLayout>
+
+
+
 
 </RelativeLayout>
