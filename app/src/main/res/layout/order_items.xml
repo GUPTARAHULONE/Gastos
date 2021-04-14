@@ -8,24 +8,20 @@
     app:cardElevation="0dp"
     android:background="#3E8479"   >
 
-        <LinearLayout
-            android:id="@+id/linear_layout_offer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
-                <TextView
-                    android:id="@+id/order_items"
-                    android:layout_width="wrap_content"
-                    android:layout_height="26dp"
-                    android:textSize="18sp"
-                    android:text="Name"
-                    android:letterSpacing="0.1"
-                    android:textColor="@color/white"/>
-        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/order_items"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:letterSpacing="0.1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
-
-
-
-

@@ -1,52 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue"
     tools:context=".DealsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="25dp"
-        android:src="@drawable/long_left" />
-
     <TextView
-        android:id="@+id/t1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="62dp"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:text="Exclusive Offers" />
-<LinearLayout
-    android:id="@+id/linear_layout_offer"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/t1"
-    android:layout_marginTop="20dp"
-    android:orientation="horizontal">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/offer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/t1"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
-
-        />
-
-</LinearLayout>
-
-
-
-
-</RelativeLayout>
+</FrameLayout>
