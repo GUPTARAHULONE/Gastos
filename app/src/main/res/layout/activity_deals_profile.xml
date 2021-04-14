@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DealsProfileActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/long_left2" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="62dp"
+        android:textColor="@color/dark_blue"
+        android:textSize="30sp"
+        android:text="Exclusive Offers" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp"
+        android:src="@drawable/home_fill" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageView4"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#FBF4E4"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/e1"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:maxLines="2"
+                android:text="6 MONTHS SUBSCRIPTION"
+                android:textColor="#0E3746"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/e2"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="80dp"
+                android:maxLines="10"
+                android:text="6 MONTHS SUBSCRIPTION wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
+                android:textColor="#0E3746"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/Activate"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/roundedbutton"
+                android:text="ACTIVATE"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:backgroundTint="#F7B401" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

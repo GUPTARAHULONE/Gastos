@@ -1,8 +1,10 @@
 package com.example.gastos;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,10 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DealsFragment extends Fragment {
+public class DealsFragment extends Fragment implements updateRecyclerviewOffer{
 
     RecyclerView recyclerView;
     List<Model_order> orderlist;
+   int pos;
+    RecyclerView recyclerView2;
+    ArrayList<Model_offer> offerlist=new ArrayList<>();
+    offerAdapter offerAdapter;
     public DealsFragment() {
         // Required empty public constructor
     }
@@ -45,9 +51,12 @@ public class DealsFragment extends Fragment {
        recyclerView =view.findViewById(R.id.offer);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerView.setAdapter(new orderAdapter(initdata(),getActivity(),this));
 
-        //initdata();
-        recyclerView.setAdapter(new orderAdapter(initdata()));
+        recyclerView2 =view.findViewById(R.id.offer2);
+        offerAdapter=new offerAdapter(offerlist);
+        recyclerView2.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        recyclerView2.setAdapter(offerAdapter);
                return view;
     }
 
@@ -57,9 +66,26 @@ public class DealsFragment extends Fragment {
         orderlist.add(new Model_order("Shopping"));
         orderlist.add(new Model_order("Health"));
         orderlist.add(new Model_order("Trending Offers"));
-        orderlist.add(new Model_order("Trending Offers"));
-        orderlist.add(new Model_order("Trending Offers"));
-        orderlist.add(new Model_order("Trending Offers"));
+
         return orderlist;
+    }
+
+    @Override
+    public void callback(int position, ArrayList<Model_offer> offerlist) {
+
+        offerAdapter=new offerAdapter(offerlist);
+        offerAdapter.notifyDataSetChanged();
+        recyclerView2.setAdapter(offerAdapter);
+
+        offerAdapter.setOnItemClickListner(new offerAdapter.OnItemClickListner() {
+            @Override
+            public void OnItemClick(int position) {
+                pos=offerlist.get(position).getPos();
+
+                Intent intent=new Intent(getActivity(),DealsProfileActivity.class);
+                intent.putExtra("pos",pos);
+                startActivity(intent);
+            }
+        });
     }
 }
