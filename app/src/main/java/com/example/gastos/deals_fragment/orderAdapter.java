@@ -1,4 +1,4 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gastos.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class orderAdapter extends RecyclerView.Adapter<orderAdapter.ViewHolder> 
     List<Model_order> orderList;
 
     int row_index=0;
-    updateRecyclerviewOffer updateRecyclerviewOffer;
+    com.example.gastos.deals_fragment.updateRecyclerviewOffer updateRecyclerviewOffer;
     Activity activity;
     boolean check=true;
     boolean select=true;

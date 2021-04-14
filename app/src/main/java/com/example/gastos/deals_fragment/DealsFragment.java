@@ -1,4 +1,4 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,18 +12,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.gastos.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class DealsFragment extends Fragment implements updateRecyclerviewOffer{
+public class DealsFragment extends Fragment implements updateRecyclerviewOffer {
 
     RecyclerView recyclerView;
     List<Model_order> orderlist;
    int pos;
     RecyclerView recyclerView2;
     ArrayList<Model_offer> offerlist=new ArrayList<>();
-    offerAdapter offerAdapter;
+    com.example.gastos.deals_fragment.offerAdapter offerAdapter;
     public DealsFragment() {
         // Required empty public constructor
     }
@@ -82,7 +84,7 @@ public class DealsFragment extends Fragment implements updateRecyclerviewOffer{
             public void OnItemClick(int position) {
                 pos=offerlist.get(position).getPos();
 
-                Intent intent=new Intent(getActivity(),DealsProfileActivity.class);
+                Intent intent=new Intent(getActivity(), DealsProfileActivity.class);
                 intent.putExtra("pos",pos);
                 startActivity(intent);
             }

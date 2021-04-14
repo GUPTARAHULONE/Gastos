@@ -1,4 +1,4 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
 
 public class Model_offer {
     int image;

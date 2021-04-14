@@ -1,18 +1,17 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
 
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gastos.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class offerAdapter extends RecyclerView.Adapter<offerAdapter.ViewHolder>{
 
@@ -67,7 +66,7 @@ public class offerAdapter extends RecyclerView.Adapter<offerAdapter.ViewHolder>{
                 @Override
                 public void onClick(View v) {
                     if (mListner!=null){
-                        int position=getAbsoluteAdapterPosition();
+                        int position=getAdapterPosition();
                         if (position!=RecyclerView.NO_POSITION){
                             mListner.OnItemClick(position);
                         }

@@ -10,9 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gastos.Model_order;
 import com.example.gastos.R;
-import com.example.gastos.orderAdapter;
 
 
 import java.util.List;
