@@ -57,6 +57,9 @@ public class DealsFragment extends Fragment {
         orderlist.add(new Model_order("Shopping"));
         orderlist.add(new Model_order("Health"));
         orderlist.add(new Model_order("Trending Offers"));
+        orderlist.add(new Model_order("Trending Offers"));
+        orderlist.add(new Model_order("Trending Offers"));
+        orderlist.add(new Model_order("Trending Offers"));
         return orderlist;
     }
 }
