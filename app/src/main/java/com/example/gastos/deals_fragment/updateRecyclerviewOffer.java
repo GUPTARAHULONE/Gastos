@@ -1,4 +1,6 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
+
+import com.example.gastos.deals_fragment.Model_offer;
 
 import java.util.ArrayList;
 

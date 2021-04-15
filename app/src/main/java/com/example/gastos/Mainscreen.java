@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.gastos.deals_fragment.DealsFragment;
 import com.example.gastos.elite_fragment.ElitemarketFragment;
+import com.example.gastos.local_fragment.LocalMarketFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Mainscreen extends AppCompatActivity {

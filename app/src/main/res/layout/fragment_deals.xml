@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_blue"
-    tools:context=".DealsFragment">
+    tools:context=".deals_fragment.DealsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="25dp"
-        android:src="@drawable/long_left" />
+        android:src="@drawable/long_left_white" />
 
     <TextView
         android:id="@+id/t1"

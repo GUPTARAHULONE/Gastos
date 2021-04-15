@@ -1,4 +1,4 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.gastos.R;
 
 public class DealsProfileActivity extends AppCompatActivity {
 
