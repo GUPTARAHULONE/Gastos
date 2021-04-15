@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_width="271dp"
+    android:layout_height="232dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="44dp"
+    android:layout_marginRight="44dp"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:gravity="center" >
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rectangle02">
 
         <ImageView
             android:id="@+id/restaurantImg"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:scaleType="center"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="false"
             app:srcCompat="@drawable/logo1" />
 
-        <RelativeLayout
-            android:layout_width="150dp"
-            android:layout_height="35dp"
+        <TextView
+            android:id="@+id/txtRestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="21dp"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/transparent"
+            android:text="Hello"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.02"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginStart="21dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginBottom="0dp"
-            android:background="#80666666" >
+            android:layout_alignParentStart="true" />
 
-            <TextView
-                android:id="@+id/txtRestaurantName"
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="Hello"
-                android:textColor="#F5F1F1"
-                android:textStyle="bold" />
-        </RelativeLayout>
+                app:srcCompat="@drawable/ic_baseline_chevron_right_24"
+                android:layout_gravity="end"
+                android:layout_marginRight="21dp"
+                android:background="@android:color/transparent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="50dp"/>
+
+
     </RelativeLayout>
 
 </LinearLayout>

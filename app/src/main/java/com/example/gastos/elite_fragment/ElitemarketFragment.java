@@ -1,5 +1,6 @@
 package com.example.gastos.elite_fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,15 +15,17 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.gastos.DealsFragment;
+import com.example.gastos.DealsProfileActivity;
 import com.example.gastos.Model_order;
 import com.example.gastos.R;
+import com.example.gastos.offerAdapter;
 import com.example.gastos.orderAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ElitemarketFragment extends Fragment {
+public class ElitemarketFragment extends Fragment implements UpdateEliteRecyclerView {
 
     RecyclerView horizontalRecyclerView;
     List<elite_Horizontal_item_view> orderlist;
@@ -30,6 +33,8 @@ public class ElitemarketFragment extends Fragment {
     public ArrayList<eliteItemView> mData = new ArrayList<>();
     private String imageURL = "";
     RecyclerView recyclerView;
+    horizontal_item_adapter h = new horizontal_item_adapter();
+
 
     public ElitemarketFragment() {
         // Required empty public constructor
@@ -62,27 +67,22 @@ public class ElitemarketFragment extends Fragment {
         horizontalRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         //initdata();
-        horizontalRecyclerView.setAdapter(new horizontal_item_adapter(initdata()));
+        horizontalRecyclerView.setAdapter(new horizontal_item_adapter(initdata() , getActivity(),this));
 
 //------------------------------------------------------------------------------------------------------------------------------------
 //        setting layout manager for recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.VERTICAL , false ));
-        dataFeed();
-
+        recyclerView.setHasFixedSize(true);
 //        Initialise and set adapter
-        adapter = new MyEliteRvAdapter(getContext(), mData);
-//        adapter.setClickListener(this);
+        adapter = new MyEliteRvAdapter(this.getActivity(),mData);
+        adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
+
+
 
         return view;
     }
 
-    public void dataFeed()
-    {
-
-        //
-
-    }
 
     private List<elite_Horizontal_item_view> initdata() {
         orderlist=new ArrayList<elite_Horizontal_item_view>();
@@ -93,5 +93,13 @@ public class ElitemarketFragment extends Fragment {
         orderlist.add(new elite_Horizontal_item_view("Clubs"));
 
         return orderlist;
+    }
+
+    @Override
+    public void callback(int position, ArrayList<eliteItemView> mData) {
+        adapter = new MyEliteRvAdapter(this.getActivity(),mData);
+        adapter.notifyDataSetChanged();
+        recyclerView.setAdapter(adapter);
+
     }
 }

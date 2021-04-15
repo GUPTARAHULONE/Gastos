@@ -16,13 +16,18 @@ import java.util.ArrayList;
 
 public class MyEliteRvAdapter extends RecyclerView.Adapter<MyEliteRvAdapter.ViewHolder> {
 
-    private ArrayList<eliteItemView> mData ;
+    public ArrayList<eliteItemView> mData  ;
     private LayoutInflater mInflater;
 
+    public MyEliteRvAdapter()
+    {
+
+    }
+
     // Data is passed into the constructor
-    public MyEliteRvAdapter(Context context, ArrayList<eliteItemView> data) {
-        this.mInflater = LayoutInflater.from(context);
+    public MyEliteRvAdapter( Context context,ArrayList<eliteItemView> data) {
         this.mData = data;
+        this.mInflater = LayoutInflater.from(context);
     }
 
     // Inflates the cell layout from xml when needed
@@ -39,8 +44,8 @@ public class MyEliteRvAdapter extends RecyclerView.Adapter<MyEliteRvAdapter.View
         String restaurantImageUrl  = mData.get(position).getRestaurantImageUrl();
         String restaurantName = mData.get(position).getRestaurantName();
 
-        Picasso.get().load(restaurantImageUrl).into(holder.restaurantImg);
-        holder.txtRestaurantName.setText(restaurantName);
+        Picasso.get().load(restaurantImageUrl).into(holder.Img);
+        holder.txtImageName.setText(restaurantName);
 
     }
 
@@ -52,8 +57,8 @@ public class MyEliteRvAdapter extends RecyclerView.Adapter<MyEliteRvAdapter.View
 
     // Stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        public TextView txtRestaurantName;
-        public ImageView restaurantImg;
+        public TextView txtImageName;
+        public ImageView Img;
         private  Context context;
 
 
@@ -61,8 +66,8 @@ public class MyEliteRvAdapter extends RecyclerView.Adapter<MyEliteRvAdapter.View
             super(itemView);
             context = itemView.getContext();
 
-            txtRestaurantName = (TextView)itemView.findViewById(R.id.txtRestaurantName);
-            restaurantImg = (ImageView)itemView.findViewById(R.id.restaurantImg);
+            txtImageName = (TextView)itemView.findViewById(R.id.txtRestaurantName);
+            Img = (ImageView)itemView.findViewById(R.id.restaurantImg);
             itemView.setOnClickListener(this);
         }
 

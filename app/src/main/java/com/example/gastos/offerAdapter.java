@@ -67,11 +67,11 @@ public class offerAdapter extends RecyclerView.Adapter<offerAdapter.ViewHolder>{
                 @Override
                 public void onClick(View v) {
                     if (mListner!=null){
-                        int position=getAbsoluteAdapterPosition();
-                        if (position!=RecyclerView.NO_POSITION){
-                            mListner.OnItemClick(position);
-                        }
-                    }
+//                        int position=getAbsoluteAdapterPosition();
+//                        if (position!=RecyclerView.NO_POSITION){
+//                            mListner.OnItemClick(position);
+//                        }
+                    };
                 }
             });
         }

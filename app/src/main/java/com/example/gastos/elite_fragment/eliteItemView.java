@@ -1,20 +1,20 @@
 package com.example.gastos.elite_fragment;
 
 public class eliteItemView {
-    String restaurantImageUrl;
-    String restaurantName;
+    String imageUrl;
+    String imageName;
 
-    public eliteItemView(String restaurantImageUrl,String restaurantName)
+    public eliteItemView(String imageUrl,String imageName)
     {
-        this.restaurantImageUrl = restaurantImageUrl;
-        this.restaurantName = restaurantName;
+        this.imageUrl = imageUrl;
+        this.imageName =imageName;
     }
 
     public String getRestaurantImageUrl() {
-        return restaurantImageUrl;
+        return imageUrl;
     }
 
     public String getRestaurantName() {
-        return restaurantName;
+        return imageName;
     }
 }

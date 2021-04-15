@@ -57,6 +57,7 @@
             android:layout_height="match_parent"
             android:id="@+id/elite_fragment_rv"
             android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle02"
             />
 
     </LinearLayout>
