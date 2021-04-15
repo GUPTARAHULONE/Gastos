@@ -22,7 +22,7 @@ public class DealsFragment extends Fragment implements updateRecyclerviewOffer {
 
     RecyclerView recyclerView;
     List<Model_order> orderlist;
-   int pos;
+     int pos;
     RecyclerView recyclerView2;
     ArrayList<Model_offer> offerlist=new ArrayList<>();
     com.example.gastos.deals_fragment.offerAdapter offerAdapter;

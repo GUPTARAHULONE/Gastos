@@ -20,11 +20,11 @@ public class orderAdapter extends RecyclerView.Adapter<orderAdapter.ViewHolder> 
 
     List<Model_order> orderList;
 
-    int row_index=0;
+  private   int row_index=0;
     com.example.gastos.deals_fragment.updateRecyclerviewOffer updateRecyclerviewOffer;
     Activity activity;
-    boolean check=true;
-    boolean select=true;
+   private boolean check=true;
+
 
     public orderAdapter( List<Model_order> orderList,Activity activity,updateRecyclerviewOffer updateRecyclerviewOffer) {
         this.orderList=orderList;
@@ -125,10 +125,11 @@ public class orderAdapter extends RecyclerView.Adapter<orderAdapter.ViewHolder> 
           }
       });
         if(row_index == position)
-           holder.row_linearlayout.setBackgroundColor(Color.parseColor("#F7B401"));
+         holder.row_linearlayout.setBackgroundColor(Color.parseColor("#F7B401"));
 
         else
             holder.row_linearlayout.setBackgroundColor(Color.parseColor("#004445"));
+
 
     }
 
