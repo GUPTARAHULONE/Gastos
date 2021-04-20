@@ -1,4 +1,4 @@
-package com.example.gastos;
+package com.example.gastos.deals_fragment;
 
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.gastos.R;
+import com.example.gastos.deals_fragment.Model_offer;
 
 import java.util.ArrayList;
 import java.util.List;

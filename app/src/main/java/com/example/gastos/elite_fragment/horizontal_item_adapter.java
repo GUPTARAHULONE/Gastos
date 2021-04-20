@@ -3,32 +3,17 @@ package com.example.gastos.elite_fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.gastos.Account_verified_activity;
-import com.example.gastos.Model_offer;
-import com.example.gastos.Model_order;
 import com.example.gastos.R;
-import com.example.gastos.orderAdapter;
-import com.example.gastos.updateRecyclerviewOffer;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
-
-
 import java.util.ArrayList;
 import java.util.List;
 

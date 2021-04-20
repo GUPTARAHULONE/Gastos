@@ -1,6 +1,6 @@
 package com.example.gastos.elite_fragment;
 
-import com.example.gastos.Model_offer;
+
 
 import java.util.ArrayList;
 
