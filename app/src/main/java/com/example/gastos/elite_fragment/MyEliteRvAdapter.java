@@ -1,9 +1,11 @@
 package com.example.gastos.elite_fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gastos.R;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import java.util.ArrayList;
 
@@ -59,7 +62,9 @@ public class MyEliteRvAdapter extends RecyclerView.Adapter<MyEliteRvAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView txtImageName;
         public ImageView Img;
+        public ImageButton btnNxt;
         private  Context context;
+
 
 
         public ViewHolder(View itemView) {
@@ -68,12 +73,17 @@ public class MyEliteRvAdapter extends RecyclerView.Adapter<MyEliteRvAdapter.View
 
             txtImageName = (TextView)itemView.findViewById(R.id.txtRestaurantName);
             Img = (ImageView)itemView.findViewById(R.id.restaurantImg);
-            itemView.setOnClickListener(this);
+            btnNxt = itemView.findViewById(R.id.btnNxt);
+            btnNxt.setOnClickListener(this);
+//            itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-
+            Intent primeProfileIntent = new Intent(context,PrimeProfile.class);
+            primeProfileIntent.putExtra("imageUrl" , mData.get(getAdapterPosition()).getRestaurantImageUrl());
+            primeProfileIntent.putExtra("imageName" , mData.get(getAdapterPosition()).getRestaurantName());
+            context.startActivity(primeProfileIntent);
         }
 
     }

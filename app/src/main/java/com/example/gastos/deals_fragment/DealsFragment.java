@@ -25,7 +25,7 @@ public class DealsFragment extends Fragment implements updateRecyclerviewOffer {
      int pos;
     RecyclerView recyclerView2;
     ArrayList<Model_offer> offerlist=new ArrayList<>();
-    com.example.gastos.deals_fragment.offerAdapter offerAdapter;
+    offerAdapter offerAdapter;
     public DealsFragment() {
         // Required empty public constructor
     }
