@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gastos">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gastos">
-        <activity android:name=".elite_fragment.PrimeProfile"></activity>
+        <activity android:name=".User_Information_Activity"></activity>
+        <activity android:name=".elite_fragment.PrimeProfile" />
         <activity android:name=".deals_fragment.DealsProfileActivity" />
         <activity android:name=".Mainscreen">
             <intent-filter>
@@ -25,8 +29,5 @@
         <activity android:name=".login_phone_activity" />
         <activity android:name=".MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
