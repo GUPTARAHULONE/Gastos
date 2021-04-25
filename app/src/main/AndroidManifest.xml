@@ -10,18 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gastos">
         <activity android:name=".home_fragment.PaymentConfirmationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".home_fragment.AccountActivationActivity" />
         <activity android:name=".home_fragment.UserProfilScreen" />
         <activity android:name=".elite_fragment.PrimeProfile" />
         <activity android:name=".deals_fragment.DealsProfileActivity" />
         <activity android:name=".Mainscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".EnterPinActivity" />
         <activity android:name=".Account_verified_activity" />
