@@ -42,7 +42,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linear_layout_local2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,8 +54,9 @@
             android:id="@+id/l2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="22dp"
-            android:layout_below="@+id/local"
+
             android:textColor="@color/dark_blue"
             android:textSize="18sp"
             android:text="Shops Nearby"
@@ -65,8 +66,9 @@
             android:id="@+id/map"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="10dp"
+
+          android:layout_toLeftOf="@id/l3"
+          android:layout_marginRight="10dp"
             android:src="@drawable/map_24px"
             />
 
@@ -74,14 +76,14 @@
             android:id="@+id/l3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/local"
+
             android:textColor="@color/dark_blue"
             android:textSize="18sp"
             android:text="See Map"
             />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linear_layout_local3"
