@@ -1,5 +1,6 @@
 package com.example.gastos.home_fragment;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.gastos.R;
@@ -23,6 +25,7 @@ public class HomeScreenFragment extends Fragment {
     private String mParam2;
     private TextView txtMostPaid;
     private TextView txtRecentPaid;
+    private RelativeLayout homeScreenCard;
 
     public HomeScreenFragment() {
         // Required empty public constructor
@@ -49,6 +52,7 @@ public class HomeScreenFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_home_screen, container, false);
         txtMostPaid = view.findViewById(R.id.txtMostPaid);
         txtRecentPaid = view.findViewById(R.id.txtRecentPaid);
+        homeScreenCard = view.findViewById(R.id.card_2);
 
         txtMostPaid.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +67,14 @@ public class HomeScreenFragment extends Fragment {
             public void onClick(View view) {
                 txtRecentPaid.setPaintFlags(txtRecentPaid.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
                 txtMostPaid.setPaintFlags(txtMostPaid.getPaintFlags() & (~ Paint.UNDERLINE_TEXT_FLAG));
+            }
+        });
+
+        homeScreenCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent userProfileIntent = new Intent(getContext(),UserProfilScreen.class);
+                startActivity(userProfileIntent);
             }
         });
 

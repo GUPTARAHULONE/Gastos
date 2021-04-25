@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gastos">
-        <activity android:name=".elite_fragment.PrimeProfile"></activity>
-        <activity android:name=".deals_fragment.DealsProfileActivity" />
-        <activity android:name=".Mainscreen">
+        <activity android:name=".home_fragment.PaymentConfirmationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".home_fragment.AccountActivationActivity" />
+        <activity android:name=".home_fragment.UserProfilScreen" />
+        <activity android:name=".elite_fragment.PrimeProfile" />
+        <activity android:name=".deals_fragment.DealsProfileActivity" />
+        <activity android:name=".Mainscreen">
+
         </activity>
         <activity android:name=".EnterPinActivity" />
         <activity android:name=".Account_verified_activity" />
@@ -25,8 +30,8 @@
         <activity android:name=".login_phone_activity" />
         <activity android:name=".MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
