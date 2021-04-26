@@ -26,7 +26,7 @@
             android:layout_marginLeft="21dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="21dp"
-            android:clipToOutline="true"
+
             android:src="@drawable/long_left_white"/>
 
         <TextView
