@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="145dp"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/rectangle_2"
+            android:background="@drawable/rectangle_earnview_2"
             android:scaleType="fitXY">
 
             <LinearLayout

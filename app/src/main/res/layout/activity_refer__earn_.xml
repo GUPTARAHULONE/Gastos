@@ -100,7 +100,7 @@
             android:id="@+id/rectangle_2"
             android:layout_width="306dp"
             android:layout_height="38dp"
-            android:background="@drawable/rectangle_2"
+            android:background="@drawable/rectangle_earnview_2"
             android:elevation="20dp"
 
             />
