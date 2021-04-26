@@ -17,5 +17,98 @@
         <item name="tabIndicatorHeight">2dp</item>
     </style>
 
+    <style name="total_savin">
+        <item name="android:textSize">
+            15sp
+        </item>
+        <item name="android:textColor">
+            #0E3746
+        </item>
+    </style>
+
+    <style name="xxxx">
+        <item name="android:textSize">
+            12sp
+        </item>
+        <item name="android:textColor">
+            #0E3746
+        </item>
+    </style>
+
+
+    <style name="name">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="payment_ben">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:letterSpacing">
+            -0.02
+        </item>
+
+        <item name="android:textColor">
+            #0E3746
+        </item>
+
+    </style>
+    <style name="account_pay">
+
+        <item name="android:textSize">
+            25sp
+        </item>
+
+        <item name="android:textColor">
+            #0E3746
+        </item>
+
+    </style>
+    <style name="paid_amount">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #0E3746
+        </item>
+
+    </style>
+
+    <style name="xxxxxxx">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #0E3746
+        </item>
+
+    </style>
+
+    <style name="transaction">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #0E3746
+        </item>
+
+    </style>
+
 
 </resources>
