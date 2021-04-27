@@ -69,7 +69,7 @@ public class DealsFragment extends Fragment implements updateRecyclerviewOffer {
             @Override
             public void onClick(View v) {
                 //Pass the context and the Activity class you need to open from the Fragment Class, to the Intent
-                Intent intent = new Intent(getContext(), Billing_screen_Activity.class);
+                Intent intent = new Intent(getContext(), Refer_Earn_Activity.class);
                 startActivity(intent);
             }
         });
