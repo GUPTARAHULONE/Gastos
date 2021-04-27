@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.gastos.Billing_screen_Activity;
 import com.example.gastos.R;
 import com.example.gastos.Refer_Earn_Activity;
 
@@ -22,7 +23,7 @@ import java.util.List;
 
 
 public class DealsFragment extends Fragment implements updateRecyclerviewOffer {
-    //ImageView img;
+    ImageView img;
 
     RecyclerView recyclerView;
     List<Model_order> orderlist;
@@ -63,15 +64,15 @@ public class DealsFragment extends Fragment implements updateRecyclerviewOffer {
         offerAdapter=new offerAdapter(offerlist);
         recyclerView2.setLayoutManager(new GridLayoutManager(getContext(), 2));
         recyclerView2.setAdapter(offerAdapter);
-              //    img =  view.findViewById(R.id.arrow_white);
-         //   img.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-          //  public void onClick(View v) {
+                  img =  view.findViewById(R.id.arrow_white);
+          img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 //Pass the context and the Activity class you need to open from the Fragment Class, to the Intent
-            //    Intent intent = new Intent(getContext(), Refer_Earn_Activity.class);
-         //       startActivity(intent);
-        //    }
-     //   });
+                Intent intent = new Intent(getContext(), Billing_screen_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
                return view;

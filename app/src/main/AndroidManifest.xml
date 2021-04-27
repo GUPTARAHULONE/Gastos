@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gastos">
-        <activity android:name=".Refer_Earn_Activity"></activity>
+        <activity android:name=".Billing_screen_Activity"></activity>
+        <activity android:name=".Refer_Earn_Activity" />
         <activity android:name=".User_Information_Activity" />
         <activity android:name=".elite_fragment.PrimeProfile" />
         <activity android:name=".deals_fragment.DealsProfileActivity" />
