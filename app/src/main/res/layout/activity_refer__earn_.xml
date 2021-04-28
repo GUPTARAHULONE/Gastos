@@ -176,42 +176,137 @@
         android:textColor="#0E3746"
         />
 
-
-        <ScrollView
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/freq"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/freq"
-            android:layout_above="@+id/sharebtn"
-            android:layout_marginTop="10dp"
-           >
+            android:isScrollContainer="true"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal">
+                            <TextView
+                                android:layout_width="231dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/what_is_ref"
+                                android:textSize="16sp"/>
+                            <ImageButton
+                                android:id="@+id/btn_drop1"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:background="@null"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+                        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDrop1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:text="@string/what_is_ref_ans"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="231dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@string/what_is_ref"/>
+                <ImageButton
+                    android:id="@+id/btn_drop2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@null"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDrop2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:text="@string/what_is_ref_ans"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="231dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="@string/what_is_ref"/>
+                    <ImageButton
+                        android:id="@+id/btn_drop3"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDrop3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:text="@string/what_is_ref_ans"/>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/pop1"
+                android:id="@+id/sharebtn"
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                 android:text="1"
-                android:onClick="showpopup1"
-                tools:ignore="OnClick" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Share"
+                android:background="@drawable/rectangle211"
+                android:textSize="20sp"
+                android:backgroundTint="@null"
+                app:backgroundTint="#F7B401"
+                />
+        </LinearLayout>
+
+    </ScrollView>
 
 
-        </ScrollView>
-
-
-    <Button
-        android:id="@+id/sharebtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp"
-        android:text="Share"
-        android:background="@drawable/rectangle211"
-        android:textSize="20sp"
-        android:backgroundTint="@null"
-        app:backgroundTint="#F7B401"
-        />
 
 </RelativeLayout>
