@@ -1,4 +1,4 @@
-package com.example.gastos;
+package com.example.gastos.home_fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.gastos.R;
 
 public class Refer_Earn_Activity extends AppCompatActivity implements View.OnClickListener {
     ImageButton drop1,drop2,drop3;

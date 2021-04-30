@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Billing_screen_Activity extends AppCompatActivity {
+import com.example.gastos.R;
+
+public class Shop_billing_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_billing_screen_);
+        setContentView(R.layout.activity_shop_billing_);
     }
 }
