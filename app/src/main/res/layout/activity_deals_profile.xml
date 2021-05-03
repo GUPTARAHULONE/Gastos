@@ -76,9 +76,10 @@
                 android:layout_marginTop="100dp"
                 android:layout_marginRight="7dp"
                 android:background="@drawable/roundedbutton"
-                android:text="ACTIVATE"
+                android:text="Activate"
                 android:textColor="@color/white"
                 android:textSize="20dp"
+                android:textAllCaps="false"
                 app:backgroundTint="#F7B401" />
 
 
