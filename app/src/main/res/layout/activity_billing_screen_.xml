@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Billing_screen_Activity">
+    tools:context=".home_fragment.Billing_screen_Activity">
 
 
     <ImageView
@@ -44,6 +44,7 @@
        android:layout_toRightOf="@+id/amount_to_p"
         android:text="Xxxx"
         android:layout_below="@+id/billing_back"
+        android:textColor="#2C131B"
         />
     <TextView
         android:id="@+id/coins"
@@ -66,7 +67,7 @@
         android:layout_below="@+id/amount_to_p"
         android:layout_marginTop="20dp"
         android:text="Xxxx"
-
+        android:textColor="#2C131B"
         />
     <View
         android:id="@+id/rectangle_9"
@@ -321,6 +322,7 @@
             android:background="@drawable/rectangle211"
             android:textSize="20sp"
             android:backgroundTint="@null"
+            android:textAllCaps="false"
             app:backgroundTint="#F7B401"
             />
 

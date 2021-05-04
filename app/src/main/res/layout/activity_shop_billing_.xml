@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Shop_billing_Activity">
+
+
+    <ImageView
+        android:id="@+id/c"
+        android:layout_width="425dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-173dp"
+        android:background="@drawable/ellipse_57"
+        />
+
+    <ImageView
+        android:id="@+id/billing_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/long_left_black" />
+
+    <TextView
+        android:id="@+id/amount_to_p"
+        android:layout_width="139dp"
+        android:layout_height="22dp"
+        android:layout_below="@+id/billing_back"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="57dp"
+        android:textColor="#2C131B"
+        android:text="Amount To Pay"
+        />
+    <TextView
+        android:id="@+id/Amount_xxxx"
+        android:layout_width="45dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="229dp"
+        android:layout_toRightOf="@+id/amount_to_p"
+        android:text="Xxxx"
+        android:textColor="#2C131B"
+        android:layout_below="@+id/billing_back"
+        />
+    <TextView
+        android:id="@+id/coins"
+        android:layout_width="110dp"
+        android:layout_height="17dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="57dp"
+        android:layout_below="@+id/amount_to_p"
+        android:layout_marginTop="26dp"
+        android:text="Billing Amount"
+        android:textSize="15dp"
+        android:textColor="#2C131B"
+        />
+    <TextView
+        android:id="@+id/Coins_xxxx"
+        android:layout_width="45dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="229dp"
+        android:layout_below="@+id/Amount_xxxx"
+        android:textSize="15dp"
+        android:layout_marginTop="26dp"
+        android:text="Xxxx"
+        android:textColor="#2C131B"
+        />
+
+    <TextView
+        android:id="@+id/use_250_coi"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="57dp"
+        android:text="Net Saving"
+        android:textSize="15dp"
+        android:layout_below="@id/coins"
+        android:textColor="#2C131B"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/Co_xxxx"
+        android:layout_width="45dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="229dp"
+        android:layout_below="@+id/Coins_xxxx"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Xxxx"
+        android:textColor="#2C131B"
+        />
+    <ScrollView
+        android:id="@+id/s"
+        android:layout_below="@+id/use_250_coi"
+        android:layout_above="@+id/paybtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gpay_card"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/card_sim"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/gpay"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginLeft="170dp"
+
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#6E7BF2"
+                    />
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohan Singh"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="80dp"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/phonepay_card"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:layout_below="@+id/gpay_card"
+                android:layout_marginTop="8dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/card_sim"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/phonepay"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginLeft="170dp"
+
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#6738B8"
+                    />
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohan Singh"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="80dp"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/paytm_card"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:layout_below="@+id/phonepay_card"
+                android:layout_marginTop="8dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/card_sim"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/patym"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginLeft="170dp"
+
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#073070"
+                    />
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohan Singh"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="80dp"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bhim_card"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:layout_below="@+id/paytm_card"
+                android:layout_marginTop="8dp"
+                android:elevation="20dp"
+                app:cardCornerRadius="10dp"
+                >
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/card_sim"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="15dp"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/bhim"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginLeft="170dp"
+
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#028C3C"
+                    />
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohan Singh"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="80dp"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/paybtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Pay"
+        android:background="@drawable/rectangle211"
+        android:textSize="20sp"
+        android:backgroundTint="@null"
+        android:textAllCaps="false"
+        app:backgroundTint="#0E3746"
+        />
+
+</RelativeLayout>

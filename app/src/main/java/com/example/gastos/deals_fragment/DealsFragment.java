@@ -1,6 +1,5 @@
 package com.example.gastos.deals_fragment;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -14,9 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.gastos.Billing_screen_Activity;
 import com.example.gastos.R;
-import com.example.gastos.Refer_Earn_Activity;
+import com.example.gastos.home_fragment.Refer_Earn_Activity;
 
 import java.util.ArrayList;
 import java.util.List;
