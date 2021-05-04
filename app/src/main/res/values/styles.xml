@@ -110,5 +110,29 @@
 
     </style>
 
+    <style name="billed_amou">
+
+        <item name="android:textSize">
+            30sp
+        </item>
+
+        <item name="android:textColor">
+            #004445
+        </item>
+
+    </style>
+
+    <style name="included_mr">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #004445
+        </item>
+
+    </style>
+
 
 </resources>
