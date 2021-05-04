@@ -19,10 +19,10 @@
         </activity>
         <activity android:name=".local_fragment.shop_profile_screens.PaymentConfirmationLocal" />
         <activity android:name=".local_fragment.shop_profile_screens.BillingScreenLocal" />
-        <activity android:name=".Billing_screen_Activity" />
-        <activity android:name=".Refer_Earn_Activity">
+        <activity android:name=".home_fragment.Billing_screen_Activity" />
+        <activity android:name=".home_fragment.Refer_Earn_Activity">
         </activity>
-        <activity android:name=".User_Information_Activity" />
+        <activity android:name=".home_fragment.User_Information_Activity" />
         <activity android:name=".elite_fragment.PrimeProfile" />
         <activity android:name=".deals_fragment.DealsProfileActivity" />
         <activity android:name=".Mainscreen" />
