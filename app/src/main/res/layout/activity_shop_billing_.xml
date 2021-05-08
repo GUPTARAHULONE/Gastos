@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Shop_billing_Activity">
+    tools:context=".local_fragment.shop_profile_screens.Shop_billing_Activity">
 
 
     <ImageView

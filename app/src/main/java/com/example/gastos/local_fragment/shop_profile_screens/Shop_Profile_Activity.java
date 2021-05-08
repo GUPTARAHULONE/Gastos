@@ -1,8 +1,10 @@
-package com.example.gastos;
+package com.example.gastos.local_fragment.shop_profile_screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.gastos.R;
 
 public class Shop_Profile_Activity extends AppCompatActivity {
 

@@ -30,7 +30,7 @@ public class Mainscreen extends AppCompatActivity {
         bottomNavigationView.getMenu().findItem(R.id.deal_item).setChecked(true);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.idFLContainer,
-                    new DealsFragment()).commit();
+                    new HomeScreenFragment()).commit();
         }
     }
 

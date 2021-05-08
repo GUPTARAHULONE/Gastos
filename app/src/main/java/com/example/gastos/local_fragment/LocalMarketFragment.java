@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 
 import com.example.gastos.R;
 import com.example.gastos.deals_fragment.DealsProfileActivity;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,11 +69,38 @@ public class LocalMarketFragment extends Fragment implements updateRecyclerviewL
         r3.setLayoutManager(new GridLayoutManager(getContext(), 2));
         r3.setAdapter(local_3_Adapter);
 
+       // GridLayoutManager manager = new GridLayoutManager(getContext(),2);
+       // r3.setLayoutManager(manager);
+       // r3.setHasFixedSize(true);
+        //local_3_Adapter = new local_3_Adapter(local3list);
+     //   r3.setAdapter(local_3_Adapter);
+
+       /* FirebaseRecyclerOptions<Model_local3> options =
+                new FirebaseRecyclerOptions.Builder<Model_local3>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Local_market"), Model_local3.class)
+                        .build();
+
+        local_3_Adapter=new local_3_Adapter(options);
+        r3.setAdapter(local_3_Adapter);
+
+        */
         return view;
     }
+  /*  @Override
+    public void onStart() {
+        super.onStart();
+        local_3_Adapter.startListening();
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        local_3_Adapter.stopListening();
+    }
 
+   */
     private List<Model_local1> indata() {
         local1List=new ArrayList<Model_local1>();
+        local1List.add(new Model_local1("All"));
         local1List.add(new Model_local1("Food"));
         local1List.add(new Model_local1("Drink"));
         local1List.add(new Model_local1("Salon"));
@@ -91,7 +120,7 @@ public class LocalMarketFragment extends Fragment implements updateRecyclerviewL
         return local2list;
     }
 
-    public void callbacklocal(int position, ArrayList<Model_local3> local3list) {
+    public void callbacklocal(int position, local_3_Adapter local_3_adapter) {
 
         local_3_Adapter=new local_3_Adapter(local3list);
         local_3_Adapter.notifyDataSetChanged();
@@ -100,12 +129,16 @@ public class LocalMarketFragment extends Fragment implements updateRecyclerviewL
        local_3_Adapter.setOnItemClickListner(new local_3_Adapter.OnItemClickListner() {
            @Override
            public void OnItemClick(int position) {
-               posi=local3list.get(position).getPosii();
+               //posi=local3list.get(position).getPosii();
 
                Intent intent=new Intent(getActivity(), DealsProfileActivity.class);
-               intent.putExtra("pos",posi);
+               //intent.putExtra("pos",posi);
                startActivity(intent);
            }
        });
     }
+
+
+
+
 }
