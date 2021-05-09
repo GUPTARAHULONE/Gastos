@@ -3,14 +3,14 @@ package com.example.gastos.local_fragment;
 public class Model_local3 {
 
   String Address,Category,OwnerName,Rating,shop_Name;
-  int image;
+   String image;
 
    // int img1,posii;
 
     public Model_local3() {
     }
 
-    public Model_local3(String address, String category, String ownerName, String rating, int image, String shop_Name) {
+    public Model_local3(String address, String category, String ownerName, String rating,  String image, String shop_Name) {
         Address = address;
         Category = category;
         OwnerName = ownerName;
@@ -51,11 +51,11 @@ public class Model_local3 {
         Rating = rating;
     }
 
-    public int getImage() {
+    public  String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage( String image) {
         this.image = image;
     }
 

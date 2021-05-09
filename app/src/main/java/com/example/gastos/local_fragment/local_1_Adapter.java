@@ -61,7 +61,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                         for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                            // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                           //  local3list.add(l);
-                            local3list.add( dataSnapshot.getValue(Model_local3.class));
+                            local3list.add( npsnapshot.getValue(Model_local3.class));
                         }
                         l3=new local_3_Adapter(local3list);
                        // r3.setAdapter(l3);
@@ -110,7 +110,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                             if (dataSnapshot.exists()){
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
 
-                                    local3list.add( dataSnapshot.getValue(Model_local3.class));
+                                    local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
                             }
@@ -142,7 +142,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
-                                    local3list.add( dataSnapshot.getValue(Model_local3.class));
+                                    local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
                                // r3.setAdapter(l3);
@@ -178,7 +178,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
-                                    local3list.add( dataSnapshot.getValue(Model_local3.class));
+                                    local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
                                // r3.setAdapter(l3);
@@ -212,7 +212,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
-                                    local3list.add( dataSnapshot.getValue(Model_local3.class));
+                                    local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
                               //  r3.setAdapter(l3);
@@ -248,7 +248,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
-                                    local3list.add( dataSnapshot.getValue(Model_local3.class));
+                                    local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
                               //  r3.setAdapter(l3);

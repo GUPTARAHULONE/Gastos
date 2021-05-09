@@ -77,7 +77,7 @@ public class local_3_Adapter extends RecyclerView.Adapter<local_3_Adapter.ViewHo
         //holder.offeritem.setImageResource(currentItem.getImage());
 
        // holder.offeritem.setImageResource(Integer.parseInt(model_local3_list.get(position).getImage()));
-        holder.offeritem.setImageResource((model_local3_list.get(position).getImage()));
+        holder.offeritem.setImageResource(Integer.parseInt((model_local3_list.get(position).getImage())));
     }
 
 
