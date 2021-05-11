@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="145dp"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/rectangle_earnview_2"
+            android:background="@drawable/prof_rec"
             android:scaleType="fitXY">
 
             <LinearLayout
@@ -43,7 +43,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name: "
+                    android:text="Name "
                     android:textAppearance="@style/name"
                     android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Phone No.: "
+                    android:text="Phone No "
                     android:textAppearance="@style/name"
                     android:textStyle="bold" />
 
@@ -87,7 +87,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email: "
+                    android:text="Email Id "
                     android:textAppearance="@style/name"
                     android:textStyle="bold" />
 
@@ -197,31 +197,55 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="fill_horizontal">
+            android:layout_marginTop="35dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/account_sta_val"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/inactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Inactive"
+                    android:textSize="12dp"
+                    android:textColor="@color/textcolor"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="Inactive"
-                android:textAppearance="@style/xxxx" />
+                android:orientation="horizontal">
 
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/toggle_account_activation"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="180dp"
-                    android:thumb="@drawable/thumb"
-                    app:showText="false"
-                    app:track="@drawable/track" />
+                <TextView
+                    android:id="@+id/Active_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Activate Now"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/textcolor" />
 
 
 
+            </LinearLayout>
         </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/account_sta"

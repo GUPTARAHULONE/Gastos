@@ -2,6 +2,7 @@ package com.example.gastos.local_fragment;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import static android.content.ContentValues.TAG;
 
 public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHolder> {
 
@@ -53,7 +56,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
         {
             ArrayList<Model_local3> local3list=new ArrayList<>();
 
-            final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market").child("All");
+            final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market/").child("All/");
             nm.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -61,7 +64,9 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                         for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                            // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                           //  local3list.add(l);
+                            Log.e(TAG , "onDataChangep0: " +npsnapshot.getValue(Model_local3.class).getAddress() );
                             local3list.add( npsnapshot.getValue(Model_local3.class));
+
                         }
                         l3=new local_3_Adapter(local3list);
                        // r3.setAdapter(l3);
@@ -103,13 +108,13 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                 if (position==0)
                 {
                     ArrayList<Model_local3> local3list=new ArrayList<>();
-                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market").child("All");
+                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market/").child("All/");
                     nm.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             if (dataSnapshot.exists()){
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
-
+                                    Log.e(TAG , "onDataChangep0: " +npsnapshot.getValue(Model_local3.class).getAddress() );
                                     local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
@@ -134,7 +139,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
 //                    local3list.add(new Model_local3(R.drawable.credit_card_24px,0));
 //                    local3list.add(new Model_local3(R.drawable.credit_card_24px,0));
 
-                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market").child("Food");
+                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market/").child("Food/");
                     nm.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -142,6 +147,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
+                                    Log.e(TAG , "onDataChangep1: " +npsnapshot.getValue(Model_local3.class).getAddress() );
                                     local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
@@ -170,7 +176,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
 //                    local3list.add(new Model_local3(R.drawable.credit_card_24px,0));
 //                    local3list.add(new Model_local3(R.drawable.credit_card_24px,0));
 
-                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market").child("Drink");
+                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market/").child("Drink/");
                     nm.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -178,6 +184,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
+                                    Log.e(TAG , "onDataChangep2: " +npsnapshot.getValue(Model_local3.class).getAddress() );
                                     local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
@@ -204,7 +211,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
 //                    local3list.add(new Model_local3(R.drawable.home_fill,0));
 //                    local3list.add(new Model_local3(R.drawable.home_fill,0));
 
-                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market").child("Salon");
+                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market/").child("Salon/");
                     nm.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -212,6 +219,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
+                                    Log.e(TAG , "onDataChangep3: " +npsnapshot.getValue(Model_local3.class).getAddress() );
                                     local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
@@ -240,7 +248,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
 //                    local3list.add(new Model_local3(R.drawable.home_fill,0));
 //                    local3list.add(new Model_local3(R.drawable.home_fill,0));
 
-                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market").child("Clothes");
+                    final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Local_market/").child("Clothes/");
                     nm.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
@@ -248,6 +256,7 @@ public class local_1_Adapter extends RecyclerView.Adapter<local_1_Adapter.ViewHo
                                 for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                                     // local3list l=npsnapshot.getValue(local_3_Adapter.class);
                                     //  local3list.add(l);
+                                    Log.e(TAG , "onDataChangep4: " +npsnapshot.getValue(Model_local3.class).getAddress() );
                                     local3list.add( npsnapshot.getValue(Model_local3.class));
                                 }
                                 l3=new local_3_Adapter(local3list);
