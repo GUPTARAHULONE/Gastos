@@ -21,7 +21,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gastos">
-        <activity android:name=".profile_activation_Activity"></activity>
+        <activity android:name=".SetNewPin"></activity>
+        <activity android:name=".SetPin" />
+        <activity android:name=".LoginActivity2" />
+        <activity android:name=".profile_activation_Activity" />
         <activity android:name=".Mainscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +35,7 @@
         <activity android:name=".local_fragment.shop_profile_screens.PaymentConfirmationLocal" />
         <activity android:name=".local_fragment.shop_profile_screens.BillingScreenLocal" />
         <activity android:name=".home_fragment.Billing_screen_Activity" />
-        <activity android:name=".home_fragment.Refer_Earn_Activity"></activity>
+        <activity android:name=".home_fragment.Refer_Earn_Activity" />
         <activity android:name=".home_fragment.User_Information_Activity" />
         <activity android:name=".elite_fragment.PrimeProfile" />
         <activity android:name=".deals_fragment.DealsProfileActivity" />

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class getotp_activity extends AppCompatActivity {
    EditText inputotp1, inputotp2, inputotp3, inputotp4, inputotp5,inputotp6;
    public String phonenumber_value;
    private FirebaseAuth mAuth;
-   Button btnVerify;
+   ImageView btnVerify;
     private TextView resendOTPTV;
     private String verificationId;
     private PhoneAuthProvider.ForceResendingToken resendOTPtoken;
@@ -47,7 +48,7 @@ public class getotp_activity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
          phonenumber_value="+91"+phonenumber_value;
 
-         btnVerify = findViewById(R.id.btnVerify);
+         btnVerify = findViewById(R.id.go);
         //getting OTP
         inputotp1=findViewById(R.id.inputcode1);
         inputotp2=findViewById(R.id.inputcode2);
@@ -55,7 +56,7 @@ public class getotp_activity extends AppCompatActivity {
         inputotp4=findViewById(R.id.inputcode4);
         inputotp5=findViewById(R.id.inputpin5);
         inputotp6=findViewById(R.id.inputcode6);
-        resendOTPTV=findViewById(R.id.resend_otp);
+        resendOTPTV=findViewById(R.id.idTVResendOTP);
 
 
          setupOTPINPUTS();

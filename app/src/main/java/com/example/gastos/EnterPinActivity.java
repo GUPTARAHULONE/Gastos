@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,7 +34,7 @@ public class EnterPinActivity extends AppCompatActivity {
     FirebaseFirestore db;
     private Map<String,Object> map = new HashMap<>();
     private String originalPin;
-    Button btnOk;
+   ImageView btnOk;
     EditText dig1,dig2,dig3,dig4,dig5;
 
     @Override
@@ -50,9 +51,9 @@ public class EnterPinActivity extends AppCompatActivity {
         dig2 = findViewById(R.id.digit2);
         dig3 = findViewById(R.id.digit3);
         dig4 = findViewById(R.id.digit4);
-        dig5 = findViewById(R.id.digit5);
+        //dig5 = findViewById(R.id.digit5);
 
-        btnOk = findViewById(R.id.btnOK);
+        btnOk = findViewById(R.id.go);
 
         setpinEditText();
         btnOk.setOnClickListener(new View.OnClickListener() {
